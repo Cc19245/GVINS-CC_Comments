@@ -1,0 +1,22 @@
+<launch>
+    <arg name="config_path" default = "$(find gvins)/../config/visensor_f9p/visensor_left_f9p_config.yaml" />
+	  <arg name="gvins_path" default = "$(find gvins)/../" />
+    
+    <node name="gvins_feature_tracker" pkg="gvins_feature_tracker" type="gvins_feature_tracker" output="log">
+        <param name="config_file" type="string" value="$(arg config_path)" />
+        <param name="gvins_folder" type="string" value="$(arg gvins_path)" />
+    </node>
+
+    <node name="gvins" pkg="gvins" type="gvins" output="screen">
+       <param name="config_file" type="string" value="$(arg config_path)" />
+       <param name="gvins_folder" type="string" value="$(arg gvins_path)" />
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" output="log" args="-d $(find gvins)/../config/gvins_rviz_config.rviz" />
+    
+    <!-- <node name="rosbag" pkg="rosbag" type="play" args="-d 3 -r 1 /mnt/F/DataSet/OpenSrcFrame/GVINS/urban_driving.bag" /> -->
+    <!-- 测试urban_driving.bag发现在 ts=1627470353（这个应该也是rosbag中的时间？）的时候挂了，
+        问题是big z translation。这个包的
+    -->
+
+</launch>

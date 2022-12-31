@@ -1,3 +1,25 @@
+# GVINS-CC_Comments
+
+## Introduction
+
+这是 GVINS 代码的粗略中文注释。
+
+## Done
+
+- 粗略过完一遍整体框架，主要注释了GNSS部分
+
+## TODO
+
+- [ ] 详细看GNSS部分内容
+
+## Acknowledgements
+
+- [GVINS](https://github.com/HKUST-Aerial-Robotics/GVINS)
+
+
+
+----
+
 # GVINS
 
 GVINS: Tightly Coupled GNSS-Visual-Inertial Fusion for Smooth and Consistent State Estimation. [paper link](https://arxiv.org/pdf/2103.07899.pdf)
@@ -56,7 +78,7 @@ make build
 The docker image `gvins:latest` should be successfully built after a while. Then you can run GVINS with:
 ```
 ./run.sh LAUNCH_FILE
-``` 
+```
 (for example `./run.sh visensor_f9p.launch`). Open another terminal and play your rosbag file, then you should be able to see the result. If you modify the code, simply re-run `./run.sh LAUNCH_FILE` to update.
 
 

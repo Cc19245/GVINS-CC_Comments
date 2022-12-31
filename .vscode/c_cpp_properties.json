@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/cc/slamWorkspace/myLearn/GVINS-CC_Comments-ws/devel/include/**",
+        "/home/cc/slam_dev/hardware_driver/livox_driver/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/cc/slamWorkspace/myLearn/GVINS-CC_Comments-ws/src/gnss_comm/include/**",
+        "/home/cc/slamWorkspace/myLearn/GVINS-CC_Comments-ws/src/GVINS-CC_Comments/camera_model/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
